@@ -1,11 +1,9 @@
-package com.example.test.ui.picture_details
+package com.example.test.ui.pictures.picture_details
 
 import com.example.test.R
 import com.mindorks.placeholderview.annotations.Layout
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState
-
 import com.mindorks.placeholderview.annotations.swipe.SwipeInState
-
 import com.mindorks.placeholderview.annotations.swipe.SwipeIn
 import com.mindorks.placeholderview.annotations.swipe.SwipeCancelState
 import com.mindorks.placeholderview.annotations.swipe.SwipeOut
@@ -15,13 +13,13 @@ import android.widget.TextView
 import android.content.Context
 import android.util.Log
 import android.widget.ImageView
-import com.example.test.ui.pictures_list.Pictures
+import com.example.test.ui.pictures.pictures_list.model.Pictures
 import com.mindorks.placeholderview.annotations.Resolve
 import com.mindorks.placeholderview.annotations.View
 
 
 @Layout(R.layout.fragment_details_swipe)
-public class SwipeCard(val context: Context?, val pictures: Pictures?,val swipeView: SwipePlaceHolderView?) {
+public class SwipeCard(val context: Context?, val pictures: Pictures?, val swipeView: SwipePlaceHolderView?) {
     @View(R.id.ivPicture)
     private val ivPicture: ImageView? = null
 

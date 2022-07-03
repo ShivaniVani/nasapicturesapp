@@ -9,11 +9,11 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.test.base.BaseActivity
-import com.example.test.ui.pictures_list.PicturesListFragment
+import com.example.test.ui.pictures.pictures_list.PicturesListFragment
 import com.example.test.databinding.ActivityMainBinding
 import com.example.test.utils.*
 import com.example.test.R
-import com.example.test.ui.picture_details.DetailsFragment
+import com.example.test.ui.pictures.picture_details.DetailsFragment
 
 class MainActivity : BaseActivity() {
 

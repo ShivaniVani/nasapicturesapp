@@ -1,4 +1,4 @@
-package com.example.test.ui.pictures_list
+package com.example.test.ui.pictures.pictures_list.model
 
 data class Pictures(
     val copyright: String,

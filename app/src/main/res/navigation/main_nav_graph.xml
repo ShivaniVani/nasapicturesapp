@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/detail_fragment"
-        android:name="com.example.test.ui.picture_details.DetailsFragment"
+        android:name="com.example.test.ui.pictures.picture_details.DetailsFragment"
         android:label="fragment_editprofile"
         app:popUpToInclusive="true"
         tools:layout="@layout/fragment_details_swipe">
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/list_fragment"
-        android:name="com.example.test.ui.pictures_list.PicturesListFragment"
+        android:name="com.example.test.ui.pictures.pictures_list.PicturesListFragment"
         android:label="fragment_list"
         app:popUpToInclusive="true"
         tools:layout="@layout/fragment_home_grid">

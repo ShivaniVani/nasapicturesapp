@@ -9,5 +9,6 @@
     <string name="exit">Exit App</string>
     <string name="are_you_sure_exit">Are you sure you want to exit app?Click on Yes to continue</string>
     <string name="details">Details</string>
+    <string name="no_internet">Please check your internet connection</string>
 
 </resources>
