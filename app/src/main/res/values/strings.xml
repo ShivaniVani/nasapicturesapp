@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nasa Pictures App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="cancel">Cancel</string>
+    <string name="Yes">Yes</string>
+    <string name="exit">Exit App</string>
+    <string name="are_you_sure_exit">Are you sure you want to exit app?Click on Yes to continue</string>
+    <string name="details">Details</string>
+
+</resources>
