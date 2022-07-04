@@ -67,7 +67,7 @@ class PicturesListFragmentTest {
             .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
     }
 
-    /* Check on Back Pressed Pop the Fragment and Resume Main Activity */
+    /* Check on Back Pressed Pop the Fragment  */
     @Test
     fun navMainScreen_fromDetailScreenTest(){
 
@@ -94,7 +94,7 @@ class PicturesListFragmentTest {
         )
 
     }
-    /* Helping Func to Add Delay for Api Response*/
+    /* Helping Func to Add Delay */
     private fun waitFor(delay: Long): ViewAction? {
         return object : ViewAction {
             override fun getConstraints(): Matcher<View> = isRoot()
