@@ -17,7 +17,7 @@
             tools:context=".ui.activity.home.MainActivity">
 
             <include
-                android:id="@+id/abLayout"
+                android:id="@+id/toolbar"
                 layout="@layout/custom_app_menu_bar"
                 android:visibility="visible" />
 

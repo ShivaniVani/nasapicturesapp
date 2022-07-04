@@ -50,6 +50,8 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
 
         //setupViewModel
         setupViewModel()
+
+        // init swipe view
         _binding.swipeView.getBuilder<SwipePlaceHolderView, SwipeViewBuilder<SwipePlaceHolderView>>()
             .setDisplayViewCount(3)
             .setSwipeDecor(
@@ -58,11 +60,13 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
                     .setRelativeScale(0.01f)
             )
 
+        // check internet connectivity
         if (Connectivity.isConnected()){
             viewModel!!.getPicturesList(_activity)
             setPicturesDetails()
         }
         else{
+            // show image for no internet connection
             _binding.ivNoInternet.visibility=View.VISIBLE
             _binding.swipeView.visibility=View.GONE
             Utils.showToast(_activity,getString(R.string.no_internet))
@@ -78,6 +82,7 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
     }
 
 
+    // set data into  view
     private fun setPicturesDetails()
     {
 

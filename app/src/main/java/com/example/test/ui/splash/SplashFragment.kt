@@ -6,6 +6,7 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavOptions
 import com.example.test.R
 import com.example.test.ui.activity.MainActivity
@@ -26,7 +27,6 @@ class SplashFragment : BaseFragment() {
         Handler().postDelayed({
             val options = NavOptions.Builder().setPopUpTo(R.id.splash_fragment, true).build()
             // check if the user is logged in or not
-
             navigateTo(
                     R.id.action_splash_to_nav_home,
                 options

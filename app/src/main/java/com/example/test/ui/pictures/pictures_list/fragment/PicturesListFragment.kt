@@ -1,4 +1,4 @@
-package com.example.test.ui.pictures.pictures_list
+package com.example.test.ui.pictures.pictures_list.fragment
 
 import android.content.Context
 import android.os.Bundle

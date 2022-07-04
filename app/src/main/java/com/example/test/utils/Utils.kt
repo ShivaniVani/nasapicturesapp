@@ -6,6 +6,8 @@ import android.view.*
 import android.widget.Toast
 import java.util.*
 import java.io.IOException
+import java.text.ParseException
+import java.text.SimpleDateFormat
 
 
 class Utils {
@@ -47,5 +49,36 @@ class Utils {
         }
 
 
+        fun dateParse(time: String): String? {
+            val inputPattern = "yyyy-MM-dd"
+            val outputPattern = "dd MMM yyyy"
+            val inputFormat = SimpleDateFormat(inputPattern)
+            val outputFormat = SimpleDateFormat(outputPattern)
+
+            var date: Date? = null
+            var str: String? = null
+
+            try {
+                date = inputFormat.parse(time)
+                str = outputFormat.format(date)
+            } catch (e: ParseException) {
+                e.printStackTrace()
+            }
+            return str
+        }
+
+        fun isDateParse(date: String): Boolean {
+            return try {
+                val sdf = SimpleDateFormat("dd MMM yyyy")
+                sdf.setTimeZone(TimeZone.getTimeZone("GMT"))
+
+                val time: Long = sdf.parse(date).getTime()
+                val now = System.currentTimeMillis()
+                true
+            } catch (e: ParseException) {
+                false
+            }
+            return false
+        }
     }
 }

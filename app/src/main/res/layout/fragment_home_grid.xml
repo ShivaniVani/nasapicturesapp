@@ -20,6 +20,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPictures"
+            android:layout_marginHorizontal="@dimen/_5sdp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/picture_single_item"
             app:spanCount="2"

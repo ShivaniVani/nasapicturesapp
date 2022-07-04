@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.test.base.BaseActivity
-import com.example.test.ui.pictures.pictures_list.PicturesListFragment
+import com.example.test.ui.pictures.pictures_list.fragment.PicturesListFragment
 import com.example.test.databinding.ActivityMainBinding
 import com.example.test.utils.*
 import com.example.test.R
@@ -42,7 +42,7 @@ class MainActivity : BaseActivity() {
     override fun initializeViews() {
 
 
-        _binding!!.abLayout.ivBack.setOnClickListener {
+        _binding!!.toolbar.ivBack.setOnClickListener {
             onBackPressed()
         }
 
@@ -51,24 +51,24 @@ class MainActivity : BaseActivity() {
 
 
     fun hideToolbar() {
-        _binding!!.abLayout.clMainContent.visibility = View.GONE
+        _binding!!.toolbar.clMainContent.visibility = View.GONE
     }
 
 
     fun setTile(title: String) {
-        _binding!!.abLayout.tvTitle.setText(title)
+        _binding!!.toolbar.tvTitle.setText(title)
     }
 
     fun showToolbar(isShowLogo: Boolean) {
-        _binding!!.abLayout.clMainContent.visibility = View.VISIBLE
+        _binding!!.toolbar.clMainContent.visibility = View.VISIBLE
         if (isShowLogo) {
-            _binding!!.abLayout.ivLogo.visibility = View.VISIBLE
-            _binding!!.abLayout.tvTitle.visibility = View.GONE
-            _binding!!.abLayout.ivBack.visibility = View.GONE
+            _binding!!.toolbar.ivLogo.visibility = View.VISIBLE
+            _binding!!.toolbar.tvTitle.visibility = View.GONE
+            _binding!!.toolbar.ivBack.visibility = View.GONE
         } else {
-            _binding!!.abLayout.ivLogo.visibility = View.GONE
-            _binding!!.abLayout.tvTitle.visibility = View.VISIBLE
-            _binding!!.abLayout.ivBack.visibility = View.VISIBLE
+            _binding!!.toolbar.ivLogo.visibility = View.GONE
+            _binding!!.toolbar.tvTitle.visibility = View.VISIBLE
+            _binding!!.toolbar.ivBack.visibility = View.VISIBLE
         }
     }
 

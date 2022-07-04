@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/list_fragment"
-        android:name="com.example.test.ui.pictures.pictures_list.PicturesListFragment"
+        android:name="com.example.test.ui.pictures.pictures_list.fragment.PicturesListFragment"
         android:label="fragment_list"
         app:popUpToInclusive="true"
         tools:layout="@layout/fragment_home_grid">

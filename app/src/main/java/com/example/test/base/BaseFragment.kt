@@ -10,7 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.test.R
 import com.example.test.ui.activity.MainActivity
 import com.example.test.ui.pictures.picture_details.DetailsFragment
-import com.example.test.ui.pictures.pictures_list.PicturesListFragment
+import com.example.test.ui.pictures.pictures_list.fragment.PicturesListFragment
 
 abstract class BaseFragment : Fragment(), View.OnClickListener {
     abstract fun initializeViews(rootView: View?)
