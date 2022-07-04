@@ -113,6 +113,7 @@ dependencies {
 
     implementation 'com.mindorks:placeholderview:0.7.1'
 
-
+    //Shimmer Effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
 }

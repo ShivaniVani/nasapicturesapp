@@ -51,6 +51,8 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
         //setupViewModel
         setupViewModel()
 
+
+
         // init swipe view
         _binding.swipeView.getBuilder<SwipePlaceHolderView, SwipeViewBuilder<SwipePlaceHolderView>>()
             .setDisplayViewCount(3)

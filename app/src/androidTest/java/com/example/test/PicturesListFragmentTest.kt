@@ -12,15 +12,20 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.intent.rule.IntentsTestRule
 import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.example.test.ui.activity.MainActivity
 import org.hamcrest.Matcher
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 
 @RunWith(AndroidJUnit4ClassRunner::class)
 class PicturesListFragmentTest {
+
+    @get: Rule
+    val activityRule: ActivityScenarioRule<MainActivity> = ActivityScenarioRule(MainActivity::class.java)
 
     /* Helping Func for RecyclerView Click */
     private fun clickOnViewChild(viewId: Int) = object : ViewAction {
@@ -104,5 +109,20 @@ class PicturesListFragmentTest {
             }
         }
     }
+
+
+
+    /* Check  Shimmer Should Hide */
+    @Test
+    fun checkHomeLoadingShimmer_IsGone(){
+        val firstActivity: IntentsTestRule<MainActivity> = IntentsTestRule(MainActivity::class.java)
+        firstActivity.launchActivity(Intent())
+
+
+        onView(isRoot()).perform(waitFor(10000))
+
+        onView(withId(R.id.shimmer_view_container)).check(matches(withEffectiveVisibility(Visibility.GONE)))
+    }
+
 
 }

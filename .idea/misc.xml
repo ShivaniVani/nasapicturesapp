@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Nasa/app/src/main/res/layout/fragment_home_grid.xml" value="0.10960144927536232" />
+        <entry key="..\:/Nasa/app/src/main/res/layout/item_loading_shimmer.xml" value="0.1734375" />
         <entry key="..\:/NasaPicturesApp/app/src/main/res/drawable/cursor.xml" value="0.17395833333333333" />
         <entry key="..\:/NasaPicturesApp/app/src/main/res/drawable/ic_back.xml" value="0.17395833333333333" />
         <entry key="..\:/NasaPicturesApp/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1734375" />

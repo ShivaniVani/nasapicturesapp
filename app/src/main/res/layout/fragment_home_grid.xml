@@ -18,8 +18,27 @@
             android:layout_height="@dimen/_250sdp"
             />
 
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:shimmer_duration="1000">
+
+            <include
+                layout="@layout/item_loading_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPictures"
+            android:visibility="gone"
             android:layout_marginHorizontal="@dimen/_5sdp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/picture_single_item"

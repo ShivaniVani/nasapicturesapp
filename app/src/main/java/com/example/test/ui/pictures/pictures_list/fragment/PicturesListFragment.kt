@@ -2,6 +2,7 @@ package com.example.test.ui.pictures.pictures_list.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +21,6 @@ import com.example.test.utils.Connectivity
 import com.example.test.utils.Utils
 
 
-
 class PicturesListFragment : BaseFragment(), PictureListAdapter.onItemClick {
 
     private lateinit var _activity: MainActivity
@@ -36,12 +36,22 @@ class PicturesListFragment : BaseFragment(), PictureListAdapter.onItemClick {
 
         //setupViewModel
         setupViewModel()
+        // start shimmer
+        _binding.shimmerViewContainer.startShimmer()
+
         // get the list of pictures from json
         if (Connectivity.isConnected()){
             viewModel!!.getPicturesList(_activity)
             getPictures()
+
+
         }
         else{
+            // stop shimmer
+            _binding.shimmerViewContainer.stopShimmer()
+            _binding.shimmerViewContainer.visibility = View.GONE
+
+                // show no internet image
             _binding.ivNoInternet.visibility=View.VISIBLE
             _binding.rvPictures.visibility=View.GONE
             Utils.showToast(_activity,getString(R.string.no_internet))
@@ -57,6 +67,14 @@ class PicturesListFragment : BaseFragment(), PictureListAdapter.onItemClick {
             _binding.rvPictures.setHasFixedSize(true)
             _binding.rvPictures.adapter = adapter
         })
+
+        // stop shimmer and display pictures
+        Handler().postDelayed({
+            // stop shimmer after delay
+            _binding.rvPictures.visibility=View.VISIBLE
+            _binding.shimmerViewContainer.stopShimmer()
+            _binding.shimmerViewContainer.visibility = View.GONE
+        }, 1000)
     }
 // set up the viewModel
     private fun setupViewModel() {
