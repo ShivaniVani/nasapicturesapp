@@ -28,6 +28,8 @@ class PictureListAdapter(private val context: Context, val onItemClickInterface:
         val data = list[position]
         Glide.with(context)
             .load(data.url)
+            .thumbnail(Glide.with(context).load(R.raw.loader))
+            .fitCenter()
             .placeholder(R.drawable.app_logo).into(holder.binding.ivUser)
         holder.binding.mainCard.setOnClickListener {
             onItemClickInterface.onItemClick(data.url)

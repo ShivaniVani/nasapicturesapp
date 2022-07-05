@@ -33,7 +33,11 @@ public class SwipeCard(val context: Context?, val pictures: Pictures?, val swipe
     @SuppressLint("SetTextI18n")
     @Resolve
     private fun onResolved() {
-        Glide.with(context!!).load(pictures!!.url).into(ivPicture!!)
+        Glide.with(context!!)
+            .load(pictures!!.url)
+            .thumbnail(Glide.with(context).load(R.raw.loader))
+            .fitCenter()
+            .into(ivPicture!!)
         tvDate!!.text= Utils.dateParse(pictures.date)
         tvCopyRight!!.text=pictures.copyright
         tvTitle!!.text=pictures.title+"\n"+pictures.explanation
